@@ -1,11 +1,12 @@
 import bpy
+from os import getenv
 
 from .login import login
 
 
-tenant_id = "e55df843-27da-4824-bf76-9bbf0a598f59"
-client_id = "deb27bec-956b-447e-8084-c37534a345fa"
-scopes = ["User.Read"]
+tenant_id = getenv("AZURE_AD_TENANT_ID", "e55df843-27da-4824-bf76-9bbf0a598f59")
+client_id = getenv("AZURE_AD_CLIENT_ID", "deb27bec-956b-447e-8084-c37534a345fa")
+scopes = [getenv("AZURE_AD_SCOPES", "User.Read")]
 
 
 class VIEW3D_PT_msal(bpy.types.Panel):

@@ -1,0 +1,57 @@
+schema_version = "1.0.0"
+
+id = "msal"
+version = "0.1.0"
+name = "msal"
+tagline = "MSAL Login plugin"
+maintainer = "David Recuenco"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+license = [
+  "SPDX:MIT",
+]
+
+copyright = [
+  "2025 David Recuenco",
+]
+
+platforms = ["windows-x64", "macos-arm64", "macos-x64", "linux-x64"]
+
+wheels = [
+  "./wheels/certifi-2025.1.31-py3-none-any.whl",
+  "./wheels/cffi-1.17.1-cp311-cp311-macosx_10_9_x86_64.whl",
+  "./wheels/cffi-1.17.1-cp311-cp311-macosx_11_0_arm64.whl",
+  "./wheels/cffi-1.17.1-cp311-cp311-win_amd64.whl",
+  "./wheels/charset_normalizer-3.4.1-cp311-cp311-macosx_10_9_universal2.whl",
+  "./wheels/charset_normalizer-3.4.1-cp311-cp311-win_amd64.whl",
+  "./wheels/cryptography-44.0.2-cp39-abi3-macosx_10_9_universal2.whl",
+  "./wheels/cryptography-44.0.2-cp39-abi3-win_amd64.whl",
+  "./wheels/idna-3.10-py3-none-any.whl",
+  "./wheels/msal-1.32.0-py3-none-any.whl",
+  "./wheels/pycparser-2.22-py3-none-any.whl",
+  "./wheels/PyJWT-2.10.1-py3-none-any.whl",
+  "./wheels/pymsalruntime-0.17.1-cp311-cp311-macosx_14_0_arm64.whl",
+  "./wheels/pymsalruntime-0.17.1-cp311-cp311-macosx_14_0_x86_64.whl",
+  "./wheels/pymsalruntime-0.17.1-cp311-cp311-win_amd64.whl",
+  "./wheels/requests-2.32.3-py3-none-any.whl",
+  "./wheels/urllib3-2.3.0-py3-none-any.whl",
+]
+
+[permissions]
+files = "Read environments, read and save materials"
+
+[build]
+paths_exclude_pattern = [
+  ".git/",
+  "__pycache__/",
+  ".vscode/",
+  ".venv/",
+  "tests/",
+  "misc/",
+  ".coverage",
+  "*.zip",
+  "*.bat",
+  "*.blend1"
+]

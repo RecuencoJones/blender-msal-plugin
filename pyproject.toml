@@ -1,0 +1,20 @@
+[project]
+name = "python-msal-broker"
+dynamic = [ "version" ]
+dependencies = [
+  "msal[broker]",
+  "python-dotenv"
+]
+requires-python = "== 3.11.*"
+
+[dependency-groups]
+dev = [
+  "black == 25.*"
+]
+
+[tool.setuptools.packages.find]
+include = ["src"]
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]

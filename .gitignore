@@ -1,0 +1,6 @@
+.venv
+.vscode
+*.egg-info
+.DS_Store
+wheels
+*.zip
